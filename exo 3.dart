@@ -1,7 +1,7 @@
-class compte {
+class Compte {
   double _solde = 0.0;
-  final Stream numerocompte;
-  compte(this.numerocompte, [this._solde = 0.0]);
+  final String numeroCompte;
+  Compte(this.numeroCompte, [this._solde = 0.0]);
 
   String get solde => "${_solde.toStringAsFixed(2)}  \$";
 
@@ -12,6 +12,13 @@ class compte {
         print("montant invalide : $montant");
       }
     }
+  }
+
+
+  void main() {
+    var compte = Compte("12345");
+    compte.depot(150);
+    print("solde du compte ${compte.numeroCompte} : ${compte.solde}");
   }
 
   
