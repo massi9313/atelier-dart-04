@@ -17,3 +17,14 @@ class Livre extends Media {
     print("ceci est un livre : $titre par $auteur. ");
    }
   }
+
+  class Film extends Media {
+    final int dureeminutes; 
+      Film(String titre, this.dureeminutes) : super(titre);
+
+      @override
+      void affichertype() {
+        print("ceci est un film : $titre ($dureeminutes min).");
+      }
+    }
+  
