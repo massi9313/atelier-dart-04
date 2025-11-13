@@ -25,3 +25,15 @@ class BaseDeDonnes implements connectable {
     print("BaseDeDonnees : deconnexion terminee.");
   }
 }
+
+void main() {
+  var api = ServeurApi();
+  var db = BaseDeDonnes();
+
+  List<connectable> services = [api, db];
+  
+  for (var service in services) {
+    service.connecter("admin");
+    service.deconnecter();
+  }
+}
