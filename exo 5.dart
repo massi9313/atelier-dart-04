@@ -15,3 +15,14 @@ class cercle extends forme {
     return 3.1416 * rayon * rayon;
   }
   }
+
+  class rectangle extends forme {
+    final double longueur;
+    final double largeur;
+    
+    rectangle(this.longueur, this.largeur);
+
+    @override
+    double calculerAire() => longueur * largeur;
+  }
+  
